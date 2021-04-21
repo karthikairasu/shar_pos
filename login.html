@@ -18,15 +18,14 @@
 
   <!-- Favicons -->
   <meta name="theme-color" content="#0B5E97">
-  <link rel="icon" type="image/png" href="assets/images/kk.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="assets/images/icon.png" sizes="194x194">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Play|Titillium+Web|Changa|Roboto|Lobster|Kufam|Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Play|Titillium+Web|Changa|Roboto|Montserrat|Kufam|Ubuntu&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
   <!-- Style files -->
-  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
   <!-- Bootstrap core CSS -->
@@ -38,7 +37,7 @@
     # General
     --------------------------------------------------------------*/
     body {
-      font-family: "Open Sans", sans-serif;
+      font-family: 'Montserrat', sans-serif;
       color: #444444;
     }
 
@@ -50,15 +49,11 @@
       color: #65c9cd;
       text-decoration: none;
     }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: "Roboto", sans-serif;
-    }
     body {
         background: #9CECFB;
         background: -webkit-linear-gradient(to right, #0052D4, #65C7F7, #9CECFB);
         background: linear-gradient(to right, #008000, #3CB371, #90EE90);
-        background: linear-gradient(rgba(27,31,72,.70), rgba(27,31,72,.70)),url(http://127.0.0.1:8000/assets/images/background_image.gif);
+        background: linear-gradient(rgba(27,31,72,.90), rgba(27,31,72,.90)),url(assets/images/background_image.gif);
         height: 100vh;
         background-position: center;
         background-repeat: no-repeat;
@@ -123,66 +118,124 @@
     .bg-darkgray{
       background-color: #607D8B!important;
     }
+    .login_container{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .blog-card__square {
+    position: absolute;
+    top: -71px;
+    left: -48px;
+    width: 130px;
+    height: 160px;
+      border-radius: 0px;
+      background: radial-gradient(circle, rgb(28 35 70 / 83%), #1C2346);
+      background: linear-gradient(to right, #237db6, rgba(31,38,103,0.9));
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      -webkit-transition: all 250ms ease-out;
+      transition: all 250ms ease-out;
+  }
+  .blog-card__circle {
+   
+      position: absolute;
+      top: -71px;
+      right: -48px;
+      width: 130px;
+      height: 160px;
+      border-radius: 0px;
+      background: radial-gradient(circle, rgb(226 82 23 / 80%), #E32E1B);
+      background: linear-gradient(to right, rgba(49,207,171,0.5), #50e3c2);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+          -webkit-transition: all 250ms ease-out;
+      transition: all 250ms ease-out;
+      -webkit-transition-delay: 50ms;
+      transition-delay: 50ms;
+  
+  }.card{
+      transition: all 250ms ease-out;
+    }
+  .card:hover {
+      -webkit-transform: translateY(-1px);
+      transform: translateY(-1px);
+      -webkit-box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      box-shadow: 0px 0px 3px 3px rgb(218 218 218 / 38%);
+  }
+  .tab-content:hover .blog-card__circle {
+      -webkit-transform: rotate(-40deg) scale(1.1);
+      transform: rotate(-40deg) scale(1.1);
+  }
+  .tab-content:hover .blog-card__square {
+      -webkit-transform: rotate(40deg) scale(1.05);
+      transform: rotate(40deg) scale(1.05);
+  }
   </style>
 </head>
 <body>
 
-<div class="container-fluid mt-5 pt-5">
+<div class="container-fluid login_container">
 <main>
   <section>
-
-   <div class="row">
-    <div class="col-md-5 col-lg-4 mx-auto ">
-    <div class="card">
+   <div class="row mx-0">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="card">
+        <div class="tab-content position-relative overflow-hidden">
+          <div class="blog-card__square"></div>  
+          <div class="blog-card__circle"></div>  
           
+          <!--Section heading-->
+          <h3 class="font-weight-bold text-center my-2">
+            <img src="assets/images/tomoor_logo.jpeg" height="70px" width="auto" width="auto" alt="logo" style="margin: 15px 0px 5px 0px;">
+          </h3>
+    
+          <div class="row mx-0">
+          <div class="col-md-12">
         
-    <!--Section heading-->
-    <h2 class="h1-responsive font-weight-bold text-center my-4">login</h2>
-   
-    <div class="row mx-0">
-     <div class="col-md-12">
-  
-      <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
 
-          <!--Grid row-->
-          <div class="row">
-              <div class="col-md-12">
-                  <div class="md-form mb-0">
-                      <input type="text" id="Username" name="Username" class="form-control">
-                      <label for="Username" class="">Username</label>
-                  </div>
-              </div>
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="Username" name="Username" class="form-control">
+                            <label for="Username" class="">Username</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <input type="text" id="Password" name="Password" class="form-control">
+                            <label for="Password">Password</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <a class="btn btn-primary" onclick="">Login</a>
+            </div>
+            <div class="status"></div>
+
           </div>
-          <!--Grid row-->
 
-          <!--Grid row-->
-          <div class="row">
-
-              <!--Grid column-->
-              <div class="col-md-12">
-
-                  <div class="md-form">
-                      <input type="text" id="Password" name="Password" class="form-control">
-                      <label for="Password">Password</label>
-                  </div>
-
-              </div>
-          </div>
-          <!--Grid row-->
-
-      </form>
+        </div>
       </div>
-
-      <div class="text-center">
-          <a class="btn btn-primary" onclick="">submit</a>
-      </div>
-      <div class="status"></div>
-
     </div>
-    </div>
-    </div>
-        
-      </div>
+   </div>
   </section>
 </main>
 </div>
